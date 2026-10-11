@@ -647,7 +647,34 @@ footer .heart {
   margin-top: 4px;
 }
 
-/* SITE LINKS (replaces big iframe embeds) */
+/* TOP QUICK LINKS (under nav) */
+.top-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px 28px;
+  padding: 12px 20px;
+  border-bottom: 1px solid var(--border);
+  background: rgba(10, 14, 30, 0.55);
+  backdrop-filter: blur(14px);
+  position: relative;
+  z-index: 60;
+}
+.top-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--fg-1);
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.top-link:hover { color: var(--accent-1); }
+.top-link .tl-arrow { color: var(--accent-1); font-weight: 700; }
+
+/* SITE LINKS */
 .site-links {
   margin-top: 48px;
   padding: 32px;
@@ -797,7 +824,6 @@ footer .heart {
     </div>
     <ul class="nav-links">
       <li><a href="#about">关于</a></li>
-      <li><a href="#server">服务器</a></li>
       <li><a href="#projects">项目</a></li>
       <li><a href="#socials">链接</a></li>
       <li><a href="#contact">联系</a></li>
@@ -805,6 +831,16 @@ footer .heart {
     </ul>
   </div>
 </nav>
+
+<!-- TOP QUICK LINKS -->
+<div class="top-links">
+  <a href="lightsnowtown.html" target="_blank" rel="noopener" class="top-link">
+    <span>🌐</span><span>访问服务器官网</span><span class="tl-arrow">↗</span>
+  </a>
+  <a href="lightsnowtown-promo.html" target="_blank" rel="noopener" class="top-link">
+    <span>🎬</span><span>访问服务器预览模式官网</span><span class="tl-arrow">↗</span>
+  </a>
+</div>
 
 <!-- HERO -->
 <section class="hero">
@@ -846,27 +882,6 @@ footer .heart {
 
   <div class="about-text reveal" style="max-width: 720px;">
     <p style="font-size: 1.15rem;">I am a Minecraft modpack creator from China. If you want to contact me, please email TR114512@qq.com.</p>
-  </div>
-</section>
-
-<!-- SERVER -->
-<section id="server">
-  <div class="section-tag reveal">Server</div>
-  <h2 class="section-title reveal">灯雪镇 · MUIT</h2>
-  <p class="section-desc reveal">迷雾揭开无限的未来 · Mist Unveils Infinite Tomorrows</p>
-
-  <div class="site-links reveal">
-    <h3 class="promo-title">网站入口</h3>
-    <a href="lightsnowtown.html" target="_blank" rel="noopener" class="site-link">
-      <span class="site-link-icon">🌐</span>
-      <span class="site-link-text">访问服务器官网</span>
-      <span class="site-link-arrow">↗</span>
-    </a>
-    <a href="lightsnowtown-promo.html" target="_blank" rel="noopener" class="site-link">
-      <span class="site-link-icon">🎬</span>
-      <span class="site-link-text">访问服务器预览模式官网</span>
-      <span class="site-link-arrow">↗</span>
-    </a>
   </div>
 </section>
 
@@ -922,6 +937,16 @@ footer .heart {
   <p class="section-desc reveal">我在 GitHub 上维护的开源项目。</p>
 
   <div class="works-grid">
+    <div class="work-card reveal">
+      <div class="work-icon">🐾</div>
+      <h3>NekoType</h3>
+      <p>Android 系统级自动化消息工具 —— 自定义前缀后缀、悬浮球一键改写发送、微信免 root 适配、应用白名单与预设映射。完全离线 · v2.8.0 · GPL-3.0。</p>
+      <div class="work-links">
+        <a href="https://nekotype.bbroot.com" target="_blank" rel="noopener">官网 ↗</a>
+        <a href="https://github.com/Yukstarlight/NekoType" target="_blank" rel="noopener">GitHub ↗</a>
+        <a href="https://github.com/Yukstarlight/NekoType/releases" target="_blank" rel="noopener">下载 ↗</a>
+      </div>
+    </div>
     <div class="work-card reveal">
       <div class="work-icon">🍃</div>
       <h3>PureLeaf-Performance-Optimization</h3>
