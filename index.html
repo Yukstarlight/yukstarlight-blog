@@ -730,6 +730,84 @@ footer .heart {
   .promo-iframe { height: 350px; }
 }
 
+/* ABOUT EXTRAS */
+.about-chips {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 36px;
+}
+.chip {
+  padding: 9px 18px;
+  border-radius: 999px;
+  border: 1px solid var(--chip-line, var(--border));
+  background: var(--chip-bg, rgba(255, 255, 255, 0.04));
+  color: var(--fg-0);
+  font-size: 0.92rem;
+  font-weight: 600;
+  transition: 0.25s;
+}
+.chip:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px var(--chip-glow, rgba(122, 168, 255, 0.2));
+}
+.now-card {
+  max-width: 720px;
+  margin: 40px auto 0;
+  padding: 26px 30px;
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent-1);
+  border-radius: 18px;
+  background: var(--glass);
+  backdrop-filter: blur(16px);
+  text-align: left;
+}
+.now-label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: var(--accent-1);
+  margin-bottom: 14px;
+}
+.now-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--fg-1);
+  font-size: 0.98rem;
+  padding: 6px 0;
+}
+.now-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--accent-2);
+  box-shadow: 0 0 10px var(--accent-2);
+  flex-shrink: 0;
+}
+
+/* PROJECT BADGES */
+.badge-row { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 4px; }
+.badge {
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--accent-1);
+  background: rgba(122, 168, 255, 0.12);
+  border: 1px solid rgba(122, 168, 255, 0.3);
+}
+
+/* CONTACT EXTRAS */
+.contact-extra {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 24px;
+}
+
 /* WORKS */
 .works-grid {
   display: grid;
@@ -880,8 +958,24 @@ footer .heart {
   <h2 class="section-title reveal">关于我</h2>
   <p class="section-desc reveal">A Minecraft modpack creator from China.</p>
 
-  <div class="about-text reveal" style="max-width: 720px;">
+  <div class="about-text reveal" style="max-width: 760px;">
     <p style="font-size: 1.15rem;">I am a Minecraft modpack creator from China. If you want to contact me, please email TR114512@qq.com.</p>
+    <p>白天做 <strong>Minecraft 整合包</strong>，晚上写 <strong>NekoType</strong>，周末折腾服务器与代码审计 —— 这里记录折腾路上的一切：整合包动态、App 开发日志、服务器运维笔记，以及踩过的每一个坑。</p>
+  </div>
+
+  <div class="about-chips reveal">
+    <span class="chip" style="--chip-line: rgba(122,168,255,0.45); --chip-bg: rgba(122,168,255,0.1); --chip-glow: rgba(122,168,255,0.25);">🎮 MC 整合包制作</span>
+    <span class="chip" style="--chip-line: rgba(200,162,255,0.45); --chip-bg: rgba(200,162,255,0.1); --chip-glow: rgba(200,162,255,0.25);">🐾 NekoType 开发者</span>
+    <span class="chip" style="--chip-line: rgba(255,155,209,0.45); --chip-bg: rgba(255,155,209,0.1); --chip-glow: rgba(255,155,209,0.25);">⛏ 服务器运维 · 灯雪镇 MUIT</span>
+    <span class="chip" style="--chip-line: rgba(94,234,212,0.45); --chip-bg: rgba(94,234,212,0.1); --chip-glow: rgba(94,234,212,0.25);">🔍 代码审计学习中</span>
+    <span class="chip" style="--chip-line: rgba(245,176,66,0.45); --chip-bg: rgba(245,176,66,0.1); --chip-glow: rgba(245,176,66,0.25);">🐧 QQ 群 1007865515</span>
+  </div>
+
+  <div class="now-card reveal">
+    <div class="now-label">// 正在折腾</div>
+    <div class="now-item"><span class="now-dot"></span>NekoType v2.8.0 —— 微信免 root 适配 / 应用白名单 / 预设映射，已发布</div>
+    <div class="now-item"><span class="now-dot"></span>灯雪镇 · MUIT 服务器日常运维与核心选型折腾</div>
+    <div class="now-item"><span class="now-dot"></span>白盒代码审计练级中，目标攒几个高危 RCE</div>
   </div>
 </section>
 
@@ -889,7 +983,7 @@ footer .heart {
 <section id="socials">
   <div class="section-tag reveal">Links</div>
   <h2 class="section-title reveal">社交链接</h2>
-  <p class="section-desc reveal">在各个平台都能找到我，按推荐度排序。</p>
+  <p class="section-desc reveal">在各个平台都能找到我 —— 合作走邮件最快，吹水进 QQ 群，作品动态看 B 站和 MCBBS。</p>
 
   <div class="socials-grid">
     <a href="https://github.com/Yukstarlight" target="_blank" rel="noopener" class="social-card reveal" style="--card-color: #6e7681; --card-shadow: rgba(110, 118, 129, 0.3); --card-color-bg: rgba(110, 118, 129, 0.15);">
@@ -927,6 +1021,31 @@ footer .heart {
       <div class="social-handle">@Yukstarlight</div>
     </a>
 
+    <a href="https://space.bilibili.com/3706926380615881" target="_blank" rel="noopener" class="social-card reveal" style="--card-color: #fb7299; --card-shadow: rgba(251, 114, 153, 0.3); --card-color-bg: rgba(251, 114, 153, 0.15);">
+      <span class="social-arrow">↗</span>
+      <div class="social-icon">📺</div>
+      <div class="social-name">Bilibili</div>
+      <div class="social-handle">UID 3706926380615881</div>
+    </a>
+
+    <div class="social-card reveal" style="--card-color: #07c160; --card-shadow: rgba(7, 193, 96, 0.3); --card-color-bg: rgba(7, 193, 96, 0.15); cursor: default;">
+      <div class="social-icon">💬</div>
+      <div class="social-name">微信</div>
+      <div class="social-handle">15262410795</div>
+    </div>
+
+    <div class="social-card reveal" style="--card-color: #fe2c55; --card-shadow: rgba(254, 44, 85, 0.3); --card-color-bg: rgba(254, 44, 85, 0.15); cursor: default;">
+      <div class="social-icon">🎵</div>
+      <div class="social-name">抖音</div>
+      <div class="social-handle">42961959913</div>
+    </div>
+
+    <div class="social-card reveal" style="--card-color: #ff7f24; --card-shadow: rgba(255, 127, 36, 0.3); --card-color-bg: rgba(255, 127, 36, 0.15); cursor: default;">
+      <div class="social-icon">🎬</div>
+      <div class="social-name">快手</div>
+      <div class="social-handle">4668751557</div>
+    </div>
+
   </div>
 </section>
 
@@ -934,13 +1053,19 @@ footer .heart {
 <section id="projects">
   <div class="section-tag reveal">Projects</div>
   <h2 class="section-title reveal">我的项目</h2>
-  <p class="section-desc reveal">我在 GitHub 上维护的开源项目。</p>
+  <p class="section-desc reveal">从 Android 工具到 Minecraft 优化 —— 全部开源在 GitHub，欢迎 Star。</p>
 
   <div class="works-grid">
     <div class="work-card reveal">
       <div class="work-icon">🐾</div>
-      <h3>NekoType</h3>
-      <p>Android 系统级自动化消息工具 —— 自定义前缀后缀、悬浮球一键改写发送、微信免 root 适配、应用白名单与预设映射。完全离线 · v2.8.0 · GPL-3.0。</p>
+      <h3>NekoType · 猫爪文本重写器</h3>
+      <div class="badge-row">
+        <span class="badge">v2.8.0</span>
+        <span class="badge">Android</span>
+        <span class="badge">GPL-3.0</span>
+        <span class="badge">完全离线</span>
+      </div>
+      <p>让每句话，都带点猫脾气 —— 悬浮球一键改写并发送，自定义前缀 / 后缀 / 替换 / 颜文字 / 加空格，微信免 root 适配，Shizuku 与 Root 双通道，八种语言、六套主题，内置 MUIT 集成终端。</p>
       <div class="work-links">
         <a href="https://nekotype.bbroot.com" target="_blank" rel="noopener">官网 ↗</a>
         <a href="https://github.com/Yukstarlight/NekoType" target="_blank" rel="noopener">GitHub ↗</a>
@@ -949,14 +1074,22 @@ footer .heart {
     </div>
     <div class="work-card reveal">
       <div class="work-icon">🍃</div>
-      <h3>PureLeaf-Performance-Optimization</h3>
-      <p>性能优化方向的开源项目，前往 GitHub 查看源码、说明与更新。</p>
+      <h3>PureLeaf 性能优化</h3>
+      <div class="badge-row">
+        <span class="badge">Minecraft</span>
+        <span class="badge">开源</span>
+      </div>
+      <p>为所有热爱 Minecraft 的玩家提供极其强大的性能优化，把服务器的每一分性能都榨出来。</p>
       <a href="https://github.com/Yukstarlight/PureLeaf-Performance-Optimization" target="_blank" rel="noopener" class="work-link">在 GitHub 查看 →</a>
     </div>
     <div class="work-card reveal">
       <div class="work-icon">🧊</div>
-      <h3>Core-OS</h3>
-      <p>核心系统方向的开源项目，前往 GitHub 查看源码、说明与更新。</p>
+      <h3>Core-OS 视觉优化</h3>
+      <div class="badge-row">
+        <span class="badge">Minecraft</span>
+        <span class="badge">开源</span>
+      </div>
+      <p>为所有热爱 Minecraft 的玩家提供无与伦比的视觉优化，让游戏画面焕然一新。</p>
       <a href="https://github.com/Yukstarlight/Core-OS" target="_blank" rel="noopener" class="work-link">在 GitHub 查看 →</a>
     </div>
   </div>
@@ -966,7 +1099,7 @@ footer .heart {
 <section id="contact">
   <div class="section-tag reveal">Contact</div>
   <h2 class="section-title reveal">联系我</h2>
-  <p class="section-desc reveal">合作、咨询、闲聊，都可以。</p>
+  <p class="section-desc reveal">整合包合作、NekoType 反馈、定制开发、或者纯粹想吹水 —— 都欢迎。</p>
 
   <div class="contact-card reveal">
     <h3>📮 邮箱</h3>
@@ -976,6 +1109,12 @@ footer .heart {
       <a href="mailto:3614005951@qq.com" class="email-chip">3614005951@qq.com</a>
     </div>
     <p style="font-size: 0.85rem; color: var(--fg-2); margin: 0;">其他方式见上方「社交链接」一栏</p>
+  </div>
+
+  <div class="contact-extra reveal">
+    <span class="chip" style="--chip-line: rgba(18,183,245,0.45); --chip-bg: rgba(18,183,245,0.1); --chip-glow: rgba(18,183,245,0.25);">🐧 QQ 3614005951</span>
+    <span class="chip" style="--chip-line: rgba(7,193,96,0.45); --chip-bg: rgba(7,193,96,0.1); --chip-glow: rgba(7,193,96,0.25);">💬 微信 15262410795</span>
+    <span class="chip" style="--chip-line: rgba(245,176,66,0.45); --chip-bg: rgba(245,176,66,0.1); --chip-glow: rgba(245,176,66,0.25);">👥 QQ 群 1007865515</span>
   </div>
 </section>
 
